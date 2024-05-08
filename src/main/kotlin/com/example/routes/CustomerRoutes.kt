@@ -22,7 +22,7 @@ fun Route.customerRouting() {
             )
             val customer =
                 customerStorage.find { it.id == id } ?: return@get call.respondText(
-                    "N customer with id $id",
+                    "No customer with id $id",
                     status = HttpStatusCode.NotFound
                 )
             call.respond(customer)
